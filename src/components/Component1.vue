@@ -8,6 +8,9 @@
 <script>
 
 import Translation from '../components/Translation.vue';
+import FileLoader from '../classes/FileLoader.js'
+
+
 
 export default {
 
@@ -24,6 +27,8 @@ export default {
 
   created() {
 
+    const loader = new FileLoader('https://vuetest-a6aa2.firebaseio.com/posts.json')
+    loader.load();
   }
 }
 </script>
