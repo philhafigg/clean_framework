@@ -1,13 +1,27 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
+
+import Component1 from './components/Component1.vue';
+import Component2 from './components/Component2.vue';
+
 export default {
-  name: 'app'
+
+  components: {
+
+    'componentone': Component1,
+    'componenttwo': Component2,
+  },
+  
+  name: 'app',
+  data () {
+    return {
+    }
+  }
 }
 </script>
 
@@ -17,7 +31,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>
